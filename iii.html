@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta para ti - Joshua</title>
+    <!-- Fuente estilo escritura a mano -->
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0d0d0d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            font-family: 'Architects Daughter', cursive, sans-serif;
+        }
+
+        /* Hoja de libreta */
+        .notebook {
+            background-color: #f4f3ef;
+            width: 100%;
+            max-width: 480px;
+            border-radius: 14px;
+            padding: 35px 30px 40px 55px;
+            position: relative;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+            /* Líneas horizontales de libreta */
+            background-image: repeating-linear-gradient(
+                transparent,
+                transparent 31px,
+                #c5ccd6 32px
+            );
+            background-position: 0 38px;
+        }
+
+        /* Espiral izquierdo */
+        .spiral {
+            position: absolute;
+            left: 12px;
+            top: 25px;
+            bottom: 25px;
+            width: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .ring {
+            width: 22px;
+            height: 12px;
+            background: linear-gradient(90deg, #1a1a1a, #7a4949, #1a1a1a);
+            border-radius: 6px;
+            box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            position: relative;
+        }
+
+        .ring::after {
+            content: '';
+            position: absolute;
+            right: -3px;
+            top: 1px;
+            width: 10px;
+            height: 10px;
+            background-color: #111;
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        /* Espacio para la foto .jpg */
+        .photo-frame {
+            background-color: #ffffff;
+            padding: 10px 10px 25px 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transform: rotate(-2deg);
+            margin: 0 auto 25px auto;
+            max-width: 240px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            background-color: #ddd;
+        }
+
+        /* Texto de la carta */
+        .letter-content {
+            color: #1c1c1c;
+            font-size: 18px;
+            line-height: 32px;
+            letter-spacing: 0.5px;
+        }
+
+        .letter-content p {
+            margin-bottom: 0;
+        }
+
+        /* Firma */
+        .signature {
+            margin-top: 20px;
+            text-align: right;
+            padding-right: 15px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .underline-flourish {
+            display: block;
+            width: 160px;
+            height: 12px;
+            margin-left: auto;
+            margin-top: -5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="notebook">
+        <!-- Espiral decorativo -->
+        <div class="spiral">
+            <div class="ring"></div><div class="ring"></div><div class="ring"></div>
+            <div class="ring"></div><div class="ring"></div><div class="ring"></div>
+            <div class="ring"></div><div class="ring"></div><div class="ring"></div>
+            <div class="ring"></div><div class="ring"></div><div class="ring"></div>
+            <div class="ring"></div><div class="ring"></div><div class="ring"></div>
+            <div class="ring"></div><div class="ring"></div><div class="ring"></div>
+        </div>
+
+        <!-- AQUÍ VA TU IMAGEN .jpeg -->
+        <div class="photo-frame">
+            <!-- Cambia "foto2.jpeg" por el nombre exacto de tu archivo -->
+            <img src="foto2.jpeg" alt="Nuestra foto">
+        </div>
+
+        <!-- Contenido de la carta -->
+        <div class="letter-content">
+            <p>
+                Hoy quiero pedirte perdón desde lo más sincero de mi corazón. Sé que muchas de mis palabras y mi manera de tratarte terminaron apagando poco a poco la ilusión que alguna vez tuvimos, hasta terminar desgastando tu alma y hacerte sentir que lo mejor era alejarte de mí. No tengo excusas para justificar mis errores. Durante este tiempo he pensado en todo lo que hice y ahora entiendo el valor de cambiar de verdad. He aprendido a valorar lo que tuvimos y a comprender todo lo que significaste para mí[cite: 1]. Si algún día vuelves a mirarme, quiero que encuentres en mí al hombre que debí ser.
+Desde que te fuiste, no ha pasado un solo día sin que te extrañe. Me he dado cuenta de todo lo que significas para mí y del vacío tan grande que dejaste. No te escribo para presionarte, pero sí con el corazón en la mano para decirte que daría lo que fuera por volver a intentarlo y construir algo mejor juntos. Si sientes que todavía queda algo entre nosotros, me encantaría hablar y volver a empezar.
+            </p>
+
+            <div class="signature">
+                Con amor, Joshua.
+                <svg class="underline-flourish" viewBox="0 0 160 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 4 Q 80 3, 155 4 L 85 12 Z" stroke="#1c1c1c" stroke-width="1.5" fill="none"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
